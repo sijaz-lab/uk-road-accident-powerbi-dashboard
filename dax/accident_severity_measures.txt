@@ -1,1 +1,20 @@
+Total_Accidents = COUNT('Accidents'[Accident_ID])
+
+Fatal_Accidents =
+CALCULATE(
+    COUNT('Accidents'[Accident_ID]),
+    'Accidents'[Accident_Severity] = "Fatal"
+)
+
+Serious_Accidents =
+CALCULATE(
+    COUNT('Accidents'[Accident_ID]),
+    'Accidents'[Accident_Severity] = "Serious"
+)
+
+Slight_Accidents =
+CALCULATE(
+    COUNT('Accidents'[Accident_ID]),
+    'Accidents'[Accident_Severity] = "Slight"
+)
 
